@@ -104,13 +104,13 @@ receivers:
 - name: linux-team-manager
   slack_configs:
   - channel: '#prometheus-alerts'
-    api_url: 'https://hooks.slack.com/services/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'
+    api_url: 'url_of_slack_channel'
     title: 'Linux instance issue'
     text: 'Linux instance {{ $labels.instance }} of job {{ $labels.job }} which belongs to group {{ $labels.category }} is having {{ $value }}'
 
 - name: better-stack
   webhook_configs:
-    url: 'https://uptime.betterstack.com/api/v1/prometheus/webhook/fWnvnsFYnkpGXN7qutQW74UR'
+    url: 'url_of_better-stack'
 
 - name: windows-admin
   email_configs:
